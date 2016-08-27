@@ -9,17 +9,26 @@
 #ip address [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
 #ip address [:digit:]{1,3}\.[:digit:]{1,3}\.[:digit:]{1,3}\.[:digit:]{1,3}
 
-if [ $# -ne 2 ];
+if [ $# -ne 1 ];
 then
-	echo "$0 match_text filename"
+	echo "$0  filename"
 	exit 0
 fi
 
-match_text=$1
-filename=$2
+filename=$1
 
-grep -q $match_text $filename
-
+egrep -o "\b[[:alpha:]]+\b" $filename | \
+awk '
+{
+	count[$0]++ 
+}
+END{ 
+	printf("%-14s%s\n","Word","Count");
+	for(ind in count){
+		printf("%-14s%d\n",ind,count[ind]);
+	}
+}
+'
 if [ $? -eq 0 ];
 then
 	echo "the text exist in the file"
