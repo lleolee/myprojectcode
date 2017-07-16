@@ -1,0 +1,29 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\bayes\com.python.pydev.analysis\v2_indexcache
+bayes.__init__|1494854556554704000|D:\python\workspace\bayes\src\bayes\__init__.py
+bayes.bayes|1494860255200270000|D:\python\workspace\bayes\src\bayes\bayes.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+2=Bayes
+1=bayes.bayes
+-- END DICTIONARY
+-- START TREE 1
+11
+bay|1|Bayes!9@
+cal|2|calculateClassProbabilities!10@calculateProbability!10@
+get|2|getAccuracy!10@getPredictions!10@
+loa|1|loadCsv!10@
+mai|1|main!10@
+mea|1|mean!10@
+pre|1|predict!10@
+sep|1|separateByClass!10@
+spl|1|splitDataset!10@
+std|1|stdev!10@
+sum|2|summarize!10@summarizeByClass!10@
+-- END TREE
+-- START TREE 2
+1
+__i|1|__init__!2&10@
+-- END TREE

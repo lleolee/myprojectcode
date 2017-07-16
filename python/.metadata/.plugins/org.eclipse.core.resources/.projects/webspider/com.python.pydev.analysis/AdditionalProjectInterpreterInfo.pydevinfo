@@ -1,0 +1,33 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\webspider\com.python.pydev.analysis\v2_indexcache
+webspider.webspider_main|1493120469921656000|D:\python\workspace\webspider\src\webspider\webspider_main.py
+webspider.__init__|1493048156203150000|D:\python\workspace\webspider\src\webspider\__init__.py
+webspider.httprequest|1493048716587981000|D:\python\workspace\webspider\src\webspider\httprequest.py
+webspider.Beibei|1493120955790601000|D:\python\workspace\webspider\src\webspider\Beibei.py
+webspider.database|1493048161303218000|D:\python\workspace\webspider\src\webspider\database.py
+-- END DISKCACHE
+-- START DICTIONARY
+8
+5=Beibei
+6=database
+7=httprequest
+4=webspider.webspider_main
+3=webspider.httprequest
+8=webspider
+1=webspider.Beibei
+2=webspider.database
+-- END DICTIONARY
+-- START TREE 1
+4
+bei|2|beibei!11@Beibei!9@
+dat|1|database!17@
+htt|1|httprequest!25@
+web|1|webspider!33@
+-- END TREE
+-- START TREE 2
+3
+__i|4|__init__!5&10@__init__!6&18@__init__!7&26@__init__!8&34@
+mak|1|makeopener!7&26@
+sav|1|savefile!6&18@
+-- END TREE

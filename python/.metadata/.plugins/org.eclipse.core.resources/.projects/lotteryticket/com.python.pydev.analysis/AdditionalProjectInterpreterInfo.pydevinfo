@@ -1,0 +1,93 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\lotteryticket\com.python.pydev.analysis\v2_indexcache
+lottery.__init__|1496038105772381000|D:\python\workspace\lotteryticket\src\lottery\__init__.py
+lottery.lottery3d|1497020674163354000|D:\python\workspace\lotteryticket\src\lottery\lottery3d.py
+lottery.database|1497020704122050000|D:\python\workspace\lotteryticket\src\lottery\database.py
+lottery.web|1496038510945347000|D:\python\workspace\lotteryticket\src\lottery\web.py
+lottery.lotterydoublecolor|1496412591483952000|D:\python\workspace\lotteryticket\src\lottery\lotterydoublecolor.py
+lottery.d3d|1497104951719686000|D:\python\workspace\lotteryticket\src\lottery\d3d.py
+lottery.double_color|1496412787087656000|D:\python\workspace\lotteryticket\src\lottery\double_color.py
+-- END DISKCACHE
+-- START DICTIONARY
+28
+1=lottery.lottery3d
+7=DoubleColor.__init__
+17=DoubleColor
+18=ResultD3d
+16=ResultDoubleColor
+11=D3d.set_decade
+24=DoubleColor.set_red
+12=D3d.set_d_3d
+5=lottery.web
+19=D3d
+6=lottery.lotterydoublecolor
+20=Database
+25=ResultDoubleColor.__init__
+21=DoubleColor.set_id
+28=D3d.set_unit
+26=ResultD3d.__init__
+3=lottery.database
+22=DoubleColor.del_id
+8=DoubleColor.set_blue
+15=D3d.set_id
+2=lottery.d3d
+9=DoubleColor.del_blue
+10=D3d.__init__
+14=Web
+23=D3d.set_num
+13=D3d.set_hundred
+27=D3d.set_sum
+4=lottery.double_color
+-- END DICTIONARY
+-- START TREE 1
+23
+cla|2|classify_sum!11@classify!11@
+cou|1|count!11@
+d3d|2|D3d!17@d3d_result_classify!10@
+dat|2|Database!25@data_d3d!11@
+dou|1|DoubleColor!33@
+f_p|2|f_predict_classify!11@f_predict_frequency!11@
+fre|3|frequency_sum!11@frequency_sort!11@frequency!11@
+get|6|get_lottery_3d!18@getXSRF!42@get_frequency!10@get_lottery_double_color!50@get_opener!42@get_simulate_3d_all!18@
+luc|1|lucky_3d!11@
+max|1|max!11@
+num|1|num_last!11@
+odd|1|odd_even_3d!11@
+oe|1|oe!11@
+oe_|7|oe_n!11@oe_classify!11@oe_u!11@oe_s!11@oe_h!11@oe_frequency!11@oe_d!11@
+pre|4|predict_f!10@predict_statistc!11@predict_sum_classify!10@predict_rank!10@
+ran|3|rank_predict_classify!11@rank_predict_frequency!11@rank_predict_percent!11@
+res|2|ResultD3d!17@ResultDoubleColor!33@
+sav|4|save_to_file!26@save_3d_ball_frequency_sorted!26@save_3d_ball_result!26@save_3d_ball_predict!26@
+sty|2|style_id!11@style_date!11@
+sum|10|sum_u!11@sum_n!11@sum_result_classify!10@sum_percent!11@sum_predict_percent!11@sum_d!11@sum_predict_classify!11@sum_predict_frequency!11@sum_h!11@sum_s!11@
+wb|1|wb!11@
+web|1|Web!41@
+ws|1|ws!11@
+-- END TREE
+-- START TREE 2
+22
+__b|3|__blue!7&35@__blue!8&35@__blue!9&35@
+__d|3|__decade!10&19@__decade!11&19@__d3d!12&19@
+__h|2|__hundred!10&19@__hundred!13&19@
+__i|11|__init__!14&42@__id!10&19@__id!15&19@__init__!16&34@__init__!17&34@__init__!18&18@__init__!19&18@__init__!20&26@__id!7&35@__id!21&35@__id!22&35@
+__n|2|__num!10&19@__num!23&19@
+__r|4|__red!7&35@__red!24&35@__result_double_color!25&35@__restult_d3d!26&19@
+__s|6|__str__!16&34@__str__!17&34@__sum!10&19@__sum!27&19@__str__!18&18@__str__!19&18@
+__u|2|__unit!10&19@__unit!28&19@
+add|2|add_result_double_color!16&34@add_result_d3d!18&18@
+blu|1|blue!17&35@
+d3d|1|d3d!18&19@
+dec|1|decade!19&19@
+del|11|del_decade!19&18@del_red!17&34@del_num!19&18@del_unit!19&18@del_blue!17&34@del_hundred!19&18@del_id!17&34@del_id!19&18@del_sum!19&18@del_result_double_color!16&34@del_result_d3d!18&18@
+get|11|get_blue!17&34@get_id!17&34@get_decade!19&18@get_red!17&34@get_result_d3d!18&18@get_num!19&18@get_hundred!19&18@get_unit!19&18@get_sum!19&18@get_id!19&18@get_result_double_color!16&34@
+hun|1|hundred!19&19@
+id|2|id!17&35@id!19&19@
+num|1|num!19&19@
+red|1|red!17&35@
+res|1|result_double_color!16&35@
+set|12|set_id!17&34@set_red!17&34@set_id!19&18@set_num!19&18@set_result_d3d!18&18@set_hundred!19&18@set_blue!17&34@set_result_double_color!16&34@set_decade!19&18@set_sum!19&18@set_unit!19&18@set_d_3d!19&18@
+sum|1|sum!19&19@
+uni|1|unit!19&19@
+-- END TREE

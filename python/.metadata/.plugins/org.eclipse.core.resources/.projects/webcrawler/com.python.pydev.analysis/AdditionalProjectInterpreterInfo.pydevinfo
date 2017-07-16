@@ -1,0 +1,35 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\webcrawler\com.python.pydev.analysis\v2_indexcache
+lycrawler.utils|1493905535023884000|D:\python\workspace\webcrawler\src\lycrawler\utils.py
+lycrawler.database|1493205563656504000|D:\python\workspace\webcrawler\src\lycrawler\database.py
+lycrawler.web|1493905228520671000|D:\python\workspace\webcrawler\src\lycrawler\web.py
+lycrawler.__init__|1493123617447503000|D:\python\workspace\webcrawler\src\lycrawler\__init__.py
+lycrawler.lycrawler|1496067903695442000|D:\python\workspace\webcrawler\src\lycrawler\lycrawler.py
+-- END DISKCACHE
+-- START DICTIONARY
+7
+4=lycrawler.utils
+5=Utils
+6=Web
+2=lycrawler.database
+7=Database
+3=lycrawler.web
+1=lycrawler.lycrawler
+-- END DICTIONARY
+-- START TREE 1
+9
+__n|1|__name__!11@
+dat|1|Database!17@
+get|2|getXSRF!26@get_opener!26@
+mai|1|main!10@
+sav|1|savefile!18@
+tes|1|test!10@
+ung|1|ungzip!34@
+uti|1|Utils!33@
+web|1|Web!25@
+-- END TREE
+-- START TREE 2
+1
+__i|3|__init__!5&34@__init__!6&26@__init__!7&18@
+-- END TREE

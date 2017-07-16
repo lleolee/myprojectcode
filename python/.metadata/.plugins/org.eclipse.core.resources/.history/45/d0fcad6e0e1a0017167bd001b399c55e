@@ -1,0 +1,39 @@
+#encoding:UTF-8
+
+import urllib.request
+import queue
+
+
+
+init_url = 'http://www.baidu.com'
+
+url_queue = queue.Queue()
+url_set =set()
+
+
+url_set.insert(init_url)
+url_queue.put(init_url)
+
+'''
+key = {'word':'beibei'}
+
+url_key=urllib.parse.urlencode(key)
+full_url = init_url + '/s?' + url_key
+
+http_client = urllib.request.urlopen(full_url)
+data = http_client.read()
+data = data.decode('UTF-8')
+print(data)
+'''
+count = 1000
+while count :
+    if url_queue.size() > 0:
+        current_url = url_queue.get()
+        store(current_url)
+        for next_url in url_set:
+            if next_url not in url_set:
+                url_set.insert(next_url)
+                url_queue.put(next_url)
+    else:
+        break
+    count --

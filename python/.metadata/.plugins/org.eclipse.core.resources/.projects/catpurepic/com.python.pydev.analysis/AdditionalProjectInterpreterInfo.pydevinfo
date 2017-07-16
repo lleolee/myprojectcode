@@ -1,0 +1,30 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\catpurepic\com.python.pydev.analysis\v2_indexcache
+capturepic.capturepic|1495287225693393000|D:\python\workspace\catpurepic\src\capturepic\capturepic.py
+capturepic.__init__|1495285214055069000|D:\python\workspace\catpurepic\src\capturepic\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+4
+1=capturepic.capturepic
+2=Spider
+4=Spider.__init__
+3=Tool
+-- END DICTIONARY
+-- START TREE 1
+3
+__a|1|__author__!11@
+spi|2|spider!11@Spider!9@
+too|1|Tool!9@
+-- END TREE
+-- START TREE 2
+8
+__i|1|__init__!2&10@
+get|5|getDetailPage!2&10@getBrief!2&10@getPage!2&10@getAllImg!2&10@getContents!2&10@
+mkd|1|mkdir!2&10@
+rem|4|removeAddr!3&11@removeExtraTag!3&11@removeNoneLine!3&11@removeImg!3&11@
+rep|4|replaceLine!3&11@replace!3&10@replaceTD!3&11@replaceBR!3&11@
+sav|6|savePageInfo!2&10@saveImg!2&10@saveBrief!2&10@saveImgs!2&10@saveIcon!2&10@savePagesInfo!2&10@
+sit|1|siteURL!4&11@
+too|1|tool!4&11@
+-- END TREE

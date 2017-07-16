@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pydev-testrun version="1.0"?><pydev-testsuite>
+<summary errors="1" failures="0" finished="true" name="Test Run: 20" tests="0" total_time="Finished in: 0.00 secs."/>
+<test location="C:\Users\lleo\workspace\iaskcrawl\src\iask\iaskcrawl.py" status="error" test="iaskcrawl" time="0">
+<stdout/>
+<stderr><![CDATA[Traceback (most recent call last):
+  File "D:\workstation\java\eclipse\plugins\org.python.pydev_5.7.0.201704111357\pysrc\_pydev_runfiles\pydev_runfiles.py", line 468, in __get_module_from_str
+    mod = __import__(modname)
+  File "C:/Users/lleo/workspace/iaskcrawl/src/iask\iaskcrawl.py", line 205, in <module>
+    spider.main()
+  File "C:/Users/lleo/workspace/iaskcrawl/src/iask\iaskcrawl.py", line 194, in main
+    self.getQuestions(start_page-x+1)
+  File "C:/Users/lleo/workspace/iaskcrawl/src/iask\iaskcrawl.py", line 151, in getQuestions
+    if self.mysql.insertData("iask_answers",good_ans_dict):
+  File "C:/Users/lleo/workspace/iaskcrawl/src/iask\mysql.py", line 51, in insertData
+    values = '"," '.join(my_dict.values())
+TypeError: sequence item 1: expected str instance, NoneType found
+ERROR: Module: iaskcrawl could not be imported (file: C:\Users\lleo\workspace\iaskcrawl\src\iask\iaskcrawl.py).
+]]></stderr>
+</test>
+<launch mode="run">
+<launch_memento><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration local="true" path="iaskcrawl iaskcrawl.py (1)"/>
+]]></launch_memento>
+</launch>
+</pydev-testsuite>

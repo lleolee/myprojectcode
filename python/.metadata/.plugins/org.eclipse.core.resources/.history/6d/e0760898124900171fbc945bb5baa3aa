@@ -1,0 +1,155 @@
+'''
+Created on 2017年6月2日
+
+@author: lleo
+'''
+class ResultD3d(object):
+    def __init__(self,result_d3d = []):
+        self.__restult_d3d = result_d3d
+
+    def __str__(self):
+        str_ret = ''
+        for elem in self.__restult_d3d:
+            if elem:
+                str_ret+=(str(elem))
+        return str_ret
+
+
+    def add_result_d3d(self,d3d):
+        self.__restult_d3d.append(d3d)
+        
+    def generate_result_d3d(self):
+        rd3d=ResultD3d()
+        return rd3d.get_result_d3d()
+    def get_result_d3d(self):
+        return self.__restult_d3d
+
+
+    def set_result_d3d(self, id, value):
+        for elem in self.__restult_d3d:
+            if id is elem.get_id():
+                elem.set_d3d()
+
+    def del_result_d3d(self):
+        del self.__restult_d3d
+
+    d3d = property(get_result_d3d, set_result_d3d, del_result_d3d, "result_d3d's docstring")
+        
+        
+        
+        
+class D3d(object):
+    '''
+    classdocs
+    '''
+
+
+    def __init__(self, id = None,hundred = None,decade = None,unit = None,sum = None,num = None):
+        '''
+        Constructor
+        '''
+        self.__id = id
+        self.__hundred = hundred
+        self.__decade = decade
+        self.__unit = unit
+        self.__sum = sum
+        self.__num = num
+        
+        
+    def __str__(self):
+        str_ret = (str(self.__id) + ' ')
+        str_ret += (str(self.__hundred) + ' ')
+        str_ret += (str(self.__decade) + ' ')
+        str_ret += (str(self.__unit) + ' ')
+        str_ret += (str(self.__sum) + ' ')
+        str_ret += (str(self.__num) + ' ')
+        return str_ret + '\n'
+    
+    def get_id(self):
+        return self.__id
+
+
+    def get_hundred(self):
+        return self.__hundred
+
+
+    def get_decade(self):
+        return self.__decade
+
+
+    def get_unit(self):
+        return self.__unit
+
+
+    def get_sum(self):
+        return self.__sum
+
+
+    def get_num(self):
+        return self.__num
+
+
+
+
+    def set_id(self, value):
+        self.__id = value
+
+
+    def set_hundred(self, value):
+        self.__hundred = value
+
+
+    def set_decade(self, value):
+        self.__decade = value
+
+
+    def set_unit(self, value):
+        self.__unit = value
+
+
+    def set_sum(self, value):
+        self.__sum = value
+
+
+    def set_num(self, value):
+        self.__num = value
+
+
+    def set_d_3d(self, value):
+        self.__d3d = value
+
+
+    def del_id(self):
+        del self.__id
+
+
+    def del_hundred(self):
+        del self.__hundred
+
+
+    def del_decade(self):
+        del self.__decade
+
+
+    def del_unit(self):
+        del self.__unit
+
+
+    def del_sum(self):
+        del self.__sum
+
+
+    def del_num(self):
+        del self.__num
+
+
+
+    id = property(get_id, set_id, del_id, "id's docstring")
+    hundred = property(get_hundred, set_hundred, del_hundred, "hundred's docstring")
+    decade = property(get_decade, set_decade, del_decade, "decade's docstring")
+    unit = property(get_unit, set_unit, del_unit, "unit's docstring")
+    sum = property(get_sum, set_sum, del_sum, "sum's docstring")
+    num = property(get_num, set_num, del_num, "num's docstring")
+
+
+    

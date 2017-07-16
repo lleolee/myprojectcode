@@ -1,0 +1,6 @@
+MODULES_MANAGER_V2
+imagesearch.__init__|D:\python\workspace\imagesearch\src\imagesearch\__init__.py
+imagesearch.colordescriptor|D:\python\workspace\imagesearch\src\imagesearch\colordescriptor.py
+imagesearch.imageindex|D:\python\workspace\imagesearch\src\imagesearch\imageindex.py
+imagesearch.imagesearch|D:\python\workspace\imagesearch\src\imagesearch\imagesearch.py
+imagesearch.searcher|D:\python\workspace\imagesearch\src\imagesearch\searcher.py

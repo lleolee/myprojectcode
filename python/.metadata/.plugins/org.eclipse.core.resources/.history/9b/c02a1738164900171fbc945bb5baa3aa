@@ -1,0 +1,151 @@
+'''
+Created on 2017年5月29日
+
+@author: lleo
+'''
+import urllib
+import re
+import bs4
+import xlwt
+import datetime
+
+import lottery.web 
+import lottery.d3d
+
+result_d3d=lottery.d3d.ResultD3d()
+def get_lottery_3d():
+#     url='http://trend.caipiao.163.com/x3d/?beginPeriod=2008001&endPeriod=2017147'
+    url='http://trend.caipiao.163.com/x3d/?beginPeriod=2017001&endPeriod=2017147'
+
+#     url='http://trend.caipiao.163.com/x3d/?periodNumber=100'
+    try:
+        openner = lottery.web.get_opener()
+        url_open = openner.open(url, data=None, timeout=10)
+    except urllib.error.HTTPError as e:
+        print('failed: open '+str(url).encode(encoding='utf_8', errors='strict'))
+        print(e)
+    finally:
+        if url_open and 200 is url_open.getcode():
+            print('url open OK')
+        else:
+            print('url: '+ str(url) +' is not found')
+            return None
+
+    try:
+        data = url_open.read().decode('utf-8')
+    except urllib.error as e:
+        print('read data Err')
+        print(e)
+    finally:
+        if data:
+            print('read data OK\n')           
+#             print('read data OK\n'+str(data))
+        else:
+            return None
+    
+    bs = bs4.BeautifulSoup(data, 'html.parser')
+    for child_tr in bs.body.tbody.children:
+        str_id = ''
+        list_3d = []
+        if child_tr:
+            for child_td in child_tr:
+#                 print(child_td)
+                
+                td_id = re.compile(r'<td>(.{7})</td>')
+                id = td_id.findall(str(child_td))
+                if id:
+                    str_id = str(id[0])
+#                     print('#####id######'+str(id))
+                td_3d = re.compile(r'<td class="ball_[ro][er][da].*?js-fold".*?>(.*?)</td>')
+                d3d_ball = td_3d.findall(str(child_td))
+                if d3d_ball:
+                    list_3d.append(int(d3d_ball[0]))
+#                     print('#####red######'+str(red_ball))
+               
+        if list_3d:
+#             print(str_id + str(list_rb) + str_bb)
+            hundred = list_3d[0]
+            decade = list_3d[1]
+            unit = list_3d[2]
+            sum_a = sum(list_3d[0:3])
+            num = 100*hundred+10*decade+unit
+            d3d=lottery.d3d.D3d(str_id,hundred,decade,unit,sum_a,num)
+#             print(dc)
+            result_d3d.add_result_d3d(d3d)
+
+#     print(str(result_d3d))
+    style_id = xlwt.easyxf('font: name Times New Roman, color-index black, bold on',num_format_str='#,##0.00')
+    style_red = xlwt.easyxf('font: name Times New Roman, color-index red, bold on',num_format_str='#,##0.00')
+    style_blue = xlwt.easyxf('font: name Times New Roman, color-index blue, bold on',num_format_str='#,##0.00')
+    style_date = xlwt.easyxf(num_format_str='YYYY-MM-DD HH:mm:SS')
+    
+    wb = xlwt.Workbook()
+    ws = wb.add_sheet('A Double Color Results Sheet')
+    ws.write(0, 0, datetime.datetime.now(), style_date)
+    
+    for i,item in enumerate(result_d3d.get_result_d3d()):
+        ws.write(i+1,0,str(item.get_id()),style_id)
+        ws.write(i+1,1,str(item.get_hundred()),style_id)
+        ws.write(i+1,2,str(item.get_decade()),style_id)
+        ws.write(i+1,3,str(item.get_unit()),style_id)
+        ws.write(i+1,4,str(item.get_sum()),style_id)
+        ws.write(i+1,5,str(item.get_num()),style_id)
+ 
+    wb.save('lottery_3d_ball.xls')
+    return result_d3d.get_result_d3d()
+
+result_d3d_all=lottery.d3d.ResultD3d() 
+print('##1')
+print(str(len(result_d3d_all.get_result_d3d())))
+def get_simulate_3d_all():
+    for i in range(1000):
+        h = int(i/100)
+        d = int(i/10%10)
+        u = int(i%100%10)
+        d3d_all=lottery.d3d.D3d(i,h,d,u,h+d+u,i)
+        result_d3d_all.add_result_d3d(d3d_all)
+    print('##2')
+    print(str(len(result_d3d_all.get_result_d3d())))
+    return result_d3d_all.get_result_d3d()
+d3d_frequency_d3d = {}
+d3d_frequency_sum = {}
+data_d3d = get_lottery_3d()
+for i,elem in enumerate(data_d3d):
+    if elem.get_num() not in d3d_frequency_d3d:
+        d3d_frequency_d3d[elem.get_num()]=[]
+    if elem.get_sum() not in d3d_frequency_sum:
+        d3d_frequency_sum[elem.get_sum()]=[]
+    d3d_frequency_d3d[elem.get_num()].append(elem)
+    d3d_frequency_sum[elem.get_sum()].append(elem)
+
+d3d_frequency = {}
+d3d_fsum = {}
+for i in range(1000):
+    d3d_frequency[i] = 0
+for i in range(30):
+    d3d_fsum[i] = 0
+for key,value in sorted(d3d_frequency_d3d.items()):
+    d3d_frequency[key] = len(value)
+for key,value in sorted(d3d_frequency_sum.items()):
+    d3d_fsum[key] = len(value)
+    
+frequency_d3d_last = sorted(d3d_frequency.items(),key=lambda x:x[1],reverse=True)
+num_last = []
+for key,value in frequency_d3d_last[-100:-1]:
+#     print('total:'+ str(len(data_d3d))+' '+str(key)+' '+str(value))
+    num_last.append(key)
+    
+
+frequency_sum_last = sorted(d3d_fsum.items(),key=lambda x:x[1],reverse=True)
+sum_last = []
+for key,value in frequency_sum_last[-10:-1]:
+#     print('total:'+ str(len(data_d3d))+' '+str(key)+' '+str(value))  
+    sum_last.append(key)
+
+data_d3d_all = get_simulate_3d_all()
+# print('the result of last frequency & last sum')
+# for i,elem in enumerate(data_d3d):  
+#     print(elem)
+#     if elem.get_num() in num_last and elem.get_sum() in sum_last:
+#         print(elem)
+    

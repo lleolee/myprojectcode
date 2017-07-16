@@ -1,0 +1,29 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\crawl\com.python.pydev.analysis\v2_indexcache
+crawl|1490428615256389000|D:\python\workspace\crawl\src\crawl.py
+-- END DISKCACHE
+-- START DICTIONARY
+4
+2=Retriever
+4=Crawler.__init__
+3=Crawler
+1=crawl
+-- END DICTIONARY
+-- START TREE 1
+2
+cra|1|Crawler!9@
+ret|1|Retriever!9@
+-- END TREE
+-- START TREE 2
+9
+__i|2|__init__!2&10@__init__!3&10@
+__s|1|__slots__!2&11@
+cou|1|count!3&11@
+dom|1|dom!4&11@
+dow|1|download!2&10@
+get|1|get_file!2&10@
+par|1|parse_links!2&10@
+q|1|q!4&11@
+see|1|seen!4&11@
+-- END TREE

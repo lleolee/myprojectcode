@@ -1,0 +1,6 @@
+MODULES_MANAGER_V2
+lycrawler.__init__|D:\python\workspace\webcrawler\src\lycrawler\__init__.py
+lycrawler.database|D:\python\workspace\webcrawler\src\lycrawler\database.py
+lycrawler.lycrawler|D:\python\workspace\webcrawler\src\lycrawler\lycrawler.py
+lycrawler.utils|D:\python\workspace\webcrawler\src\lycrawler\utils.py
+lycrawler.web|D:\python\workspace\webcrawler\src\lycrawler\web.py

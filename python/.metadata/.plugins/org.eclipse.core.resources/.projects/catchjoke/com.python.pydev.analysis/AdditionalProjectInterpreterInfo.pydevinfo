@@ -1,0 +1,29 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\catchjoke\com.python.pydev.analysis\v2_indexcache
+catchjoke.__init__|1495028584240176000|D:\python\workspace\catchjoke\src\catchjoke\__init__.py
+catchjoke.catchjoke|1495030627529706000|D:\python\workspace\catchjoke\src\catchjoke\catchjoke.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+2=Catchjoke
+1=catchjoke.catchjoke
+-- END DICTIONARY
+-- START TREE 1
+11
+cat|1|Catchjoke!9@
+con|1|content!11@
+has|1|hasimg!11@
+hea|1|headers!11@
+ite|1|items!11@
+pag|1|page!11@
+pat|1|pattern!11@
+req|1|request!11@
+res|1|response!11@
+url|1|url!11@
+use|1|user_agent!11@
+-- END TREE
+-- START TREE 2
+1
+__i|1|__init__!2&10@
+-- END TREE

@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+#encoding:UTF-8
+
+'''
+import urllib.request
+import queue
+
+
+
+init_url = 'http://www.baidu.com'
+
+url_queue = queue.Queue()
+url_set =set()
+
+
+url_set.insert(init_url)
+url_queue.put(init_url)
+
+
+key = {'word':'beibei'}
+
+url_key=urllib.parse.urlencode(key)
+full_url = init_url + '/s?' + url_key
+
+http_client = urllib.request.urlopen(full_url)
+data = http_client.read()
+data = data.decode('UTF-8')
+print(data)
+'''
+
+import re
+import urllib.request
+import urllib
+
+
+import collections
+
+
+queue = collections.deque()
+visited = set()
+
+url = 'http://www.baidu.com'
+queue.append(url)
+cnt = 0
+
+while queue:
+    url = queue.popleft()
+    visited.add(url)
+    
+    print('catching:'+str(cnt)+':url='+url)
+    cnt +=1
+    try:
+        urlop = urllib.request.urlopen(url,timeout=3)
+    except:
+        print('urlopen failed ' + str(cnt)+'...')
+        continue
+    if 'html' not in urlop.getheader('Content-Type'):
+        continue
+    
+    try:
+        data = urlop.read().decode('utf-8')
+    except:
+        continue
+    finally:
+        if cnt > 16 :
+            break
+    linkre = re.compile('href=\"(.+?)\"')
+    for x in linkre.findall(data):
+        if 'http' in x and x not in visited:
+            queue.append(x)
+            print('add queue:'+str(len(queue))+':'+x)
+

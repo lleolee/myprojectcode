@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+#encoding:UTF-8
+
+'''
+import urllib.request
+import queue
+
+
+
+init_url = 'http://www.baidu.com'
+
+url_queue = queue.Queue()
+url_set =set()
+
+
+url_set.insert(init_url)
+url_queue.put(init_url)
+
+
+key = {'word':'beibei'}
+
+url_key=urllib.parse.urlencode(key)
+full_url = init_url + '/s?' + url_key
+
+http_client = urllib.request.urlopen(full_url)
+data = http_client.read()
+data = data.decode('UTF-8')
+print(data)
+'''
+
+import collections
+
+queue = collections.set(['Eric','John','Michael'])
+queue.add('Terry')
+queue.add('Graham')
+queue.add()
+print(queue)
+queue.add()
+print(queue)

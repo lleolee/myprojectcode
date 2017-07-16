@@ -1,0 +1,24 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\cookie\com.python.pydev.analysis\v2_indexcache
+cookie.__init__|1495018701972263000|D:\python\workspace\cookie\src\cookie\__init__.py
+cookie.cookie|1495027507160618000|D:\python\workspace\cookie\src\cookie\cookie.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+2=Cookie
+1=cookie.cookie
+-- END DICTIONARY
+-- START TREE 1
+6
+coo|2|cookie!11@Cookie!9@
+fil|1|filename!11@
+han|1|handler!11@
+ope|1|opener!11@
+pag|1|page!11@
+res|1|response!11@
+-- END TREE
+-- START TREE 2
+1
+__i|1|__init__!2&10@
+-- END TREE

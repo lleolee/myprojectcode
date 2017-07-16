@@ -1,0 +1,33 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\ListDir\com.python.pydev.analysis\v2_indexcache
+ListDir|1489848747693029000|D:\python\workspace\ListDir\src\ListDir.py
+-- END DISKCACHE
+-- START DICTIONARY
+5
+5=DirList.doLs
+2=DirList
+4=DirList.setDirAndGo
+3=DirList.__init__
+1=ListDir
+-- END DICTIONARY
+-- START TREE 1
+2
+dir|1|DirList!9@
+mai|1|main!10@
+-- END TREE
+-- START TREE 2
+12
+__i|1|__init__!2&10@
+bfm|1|bfm!3&11@
+clr|2|clr!3&11@clrDir!2&10@
+cwd|1|cwd!3&11@
+dir|5|dirsb!3&11@dirs!3&11@dirl!3&11@dirfm!3&11@dirn!3&11@
+dol|1|doLs!2&10@
+lab|1|label!3&11@
+las|2|last!4&11@last!5&11@
+ls|1|ls!3&11@
+qui|1|quit!3&11@
+set|1|setDirAndGo!2&10@
+top|1|top!3&11@
+-- END TREE

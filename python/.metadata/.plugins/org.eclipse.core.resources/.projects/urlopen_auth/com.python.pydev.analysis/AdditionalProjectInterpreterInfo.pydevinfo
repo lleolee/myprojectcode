@@ -1,0 +1,22 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\urlopen_auth\com.python.pydev.analysis\v2_indexcache
+urlopen_auth|1489923120963302000|D:\python\workspace\urlopen_auth\src\urlopen_auth.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=urlopen_auth
+-- END DICTIONARY
+-- START TREE 1
+7
+f|1|f!11@
+han|1|handler_version!10@
+log|1|LOGIN!11@
+pas|1|PASSWD!11@
+rea|1|REALM!11@
+req|1|request_version!10@
+url|2|url!11@URL!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

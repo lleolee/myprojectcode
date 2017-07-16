@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;urlopen_auth/src/urlopen_auth&apos; to &apos;urlopen_auth.py&apos;" description="Rename resource &apos;urlopen_auth&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/urlopen_auth" name="urlopen_auth.py" stamp="1489921015056" updateReferences="true"/>
+</session>

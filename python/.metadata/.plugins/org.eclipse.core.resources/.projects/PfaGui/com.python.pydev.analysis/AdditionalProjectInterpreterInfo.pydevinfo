@@ -1,0 +1,23 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\PfaGui\com.python.pydev.analysis\v2_indexcache
+PfaGuiMain|1489669151412196000|D:\python\workspace\PfaGui\src\PfaGuiMain.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=PfaGuiMain
+-- END DICTIONARY
+-- START TREE 1
+8
+cmd|1|cmd!11@
+cri|3|critCB!11@CRIT!11@CritButton!11@
+inf|1|infoCB!11@
+myb|1|MyBttton!11@
+reg|2|ReguButton!11@REGU!11@
+sig|2|signType!11@SIGNS!11@
+top|1|top!11@
+war|3|WARN!11@WarnButton!11@warnCB!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

@@ -1,0 +1,25 @@
+'''
+Created on 2017年5月4日
+
+@author: lleo
+'''
+from imaplib import dat
+def ungzip(data):
+    try:
+        data = gzip.decompress(data)
+    except Exception as e:
+        print(e)
+    finally:
+        
+
+class Utils(object):
+    '''
+    classdocs
+    '''
+
+
+    def __init__(self, params):
+        '''
+        Constructor
+        '''
+        

@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+#encoding:UTF-8
+
+'''
+import urllib.request
+import queue
+
+
+
+init_url = 'http://www.baidu.com'
+
+url_queue = queue.Queue()
+url_set =set()
+
+
+url_set.insert(init_url)
+url_queue.put(init_url)
+
+
+key = {'word':'beibei'}
+
+url_key=urllib.parse.urlencode(key)
+full_url = init_url + '/s?' + url_key
+
+http_client = urllib.request.urlopen(full_url)
+data = http_client.read()
+data = data.decode('UTF-8')
+print(data)
+'''
+
+import re
+import urllib.request
+import http.cookiejar
+
+import collections
+
+def makMyOpener(head={
+    'Connection': 'Keep-Alive',
+    'Accept': 'text/html, application/xhtml+xml, */*',
+    'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    }):
+    cj = http.cookiejar.CookieJar()
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+    header = []
+    for key,value in head.items():
+        elem = (key,value)
+    opener.addheaders = header
+    return opener
+
+def saveFile(path='D:\\temp.out',data):
+    save_path = 'D:\\temp.out'
+    f_obj = open(save_path,'wb')
+    f_obj.write(data)
+    f_obj.close()    
+    
+queue = collections.deque()
+visited = set()
+
+url = 'http://www.baidu.com'
+queue.append(url)
+cnt = 0
+
+while queue:
+    url = queue.popleft()
+    visited.add(url)
+    
+    print('catching:'+str(cnt)+':url='+url)
+    cnt +=1
+    try:
+        '''
+        httpreq = urllib.request.Request(url,headers = {
+            'Connection': 'Keep-Alive',
+            'Accept': 'text/html, application/xhtml+xml, */*',
+            'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+            'User-Agent': 'Mozilla/6.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+        })
+        urlop = urllib.request.urlopen(httpreq,timeout=3)
+        '''
+        oper = makMyOpener()
+        uop = oper.open(url,timeout=1000)
+    except:
+        print('urlopen failed ' + str(cnt)+'...')
+        continue
+    #if 'html' not in urlop.getheader('Content-Type'):
+    if 'html' not in uop.getheader('Content-Type'):
+        continue
+    
+    try:
+        #data = urlop.read().decode('utf-8')
+        data = uop.read().decode('utf-8')
+    except:
+        continue
+    finally:
+        if cnt > 16 : 
+            break
+    linkre = re.compile('href=\"(.+?)\"')
+    for x in linkre.findall(data):
+        if 'http' in x and x not in visited:
+            queue.append(x)
+            print('add queue:'+str(len(queue))+':'+x)
+    saveFile(data)
+   

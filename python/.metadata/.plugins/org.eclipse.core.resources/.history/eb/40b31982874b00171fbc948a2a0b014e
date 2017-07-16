@@ -1,0 +1,144 @@
+'''
+Created on 2017年5月29日
+
+@author: lleo
+'''
+import urllib
+import re
+import bs4
+import xlwt
+import datetime
+
+import lottery.web 
+import lottery.d3d
+from numpy import sort
+from lottery import database
+
+
+def d3d_result_classify(data_d3d):
+    d3d_classify = {}
+    for i,elem in enumerate(data_d3d):
+        if elem.get_num() not in d3d_classify:
+            d3d_classify[elem.get_num()]=[]
+        d3d_classify[elem.get_num()].append(elem)
+    return d3d_classify
+        
+def sum_result_classify(data_d3d):
+    d3d_classify_sum = {}
+    for i,elem in enumerate(data_d3d):
+        if elem.get_sum() not in d3d_classify_sum:
+            d3d_classify_sum[elem.get_sum()]=[]
+        d3d_classify_sum[elem.get_sum()].append(elem)
+    return d3d_classify_sum
+        
+def get_frequency(count,classify):
+    frequency = {}
+    if count < len(classify):
+        print('count is too short')
+        return None
+    for i in range(count):
+        frequency[i] = 0
+    for key,value in sorted(classify.items()):
+        frequency[key] = len(value)
+    return frequency
+
+
+
+data_d3d = lottery.d3d.get_lottery_3d()
+#save to xls
+database.save_3d_ball_result(data_d3d)
+
+
+classify = d3d_result_classify(data_d3d)
+classify_sum = sum_result_classify(data_d3d)
+
+frequency = get_frequency(1000, classify)
+#save sorted frequency
+database.save_3d_ball_frequency_sorted(frequency)
+
+frequency_sum = get_frequency(30, classify_sum)
+
+frequency_sort = sorted(frequency.items(),key=lambda x:x[1],reverse=False)
+num_last = []
+for key,value in frequency_sort[0:100]:
+    print('total:'+ str(len(data_d3d))+' '+str(key)+' '+str(value))
+    num_last.append(key)
+
+
+
+
+# simulate_3d_all = lottery.d3d.get_simulate_3d_all()
+# d3d_classify_sum_all = sum_result_classify(simulate_3d_all)
+#      
+# sum_frequency_all = get_frequency(30, d3d_classify_sum_all)
+# # print(sum_frequency_all)
+# percent = [(x,float(y/1000.0)) for x,y in sum_frequency_all.items()]
+# sum_percent = 0
+# for x,y in percent:
+#     print('sum='+str(x)+' percent='+str(y))
+#     if x in range(7,21):
+#         sum_percent +=y
+# print('sum='+str([i for i in range(7,21)])+' sum_percent='+str(sum_percent))
+    
+
+print('the result of last frequency & last sum')
+database.save_3d_ball_predict(num_last)
+
+style_id = xlwt.easyxf('font: name Times New Roman, color-index black, bold on',num_format_str='#,##0.00')
+style_date = xlwt.easyxf(num_format_str='YYYY-MM-DD HH:mm:SS')
+wb = xlwt.Workbook()
+ws = wb.add_sheet('A 3D Results Sheet')
+ws.write(0, 0, datetime.datetime.now(), style_date)
+
+predict_statistc = []
+max = 1000 if len(data_d3d) > 1000 else len(data_d3d)
+for i in range(max):
+    lucky_3d = data_d3d[-(i+1)]
+    ws.write(i+1,0,str(lucky_3d.get_id()),style_id)
+    ws.write(i+1,1,str(lucky_3d.get_num()),style_id)
+    ws.write(i+1,2,str(lucky_3d.get_sum()),style_id)
+#     print(data_d3d[-(i+1)])
+#     print([x.get_num() for x in data_d3d[:-(i+1)]])
+    classify = d3d_result_classify(data_d3d[:-(i+1)])
+    frequency = get_frequency(1000, classify)
+    frequency_sort = sorted(frequency.items(),key=lambda x:x[1],reverse=False)
+#     print(frequency_sort)
+    for key,value in frequency_sort:
+        if key == lucky_3d.get_num():
+#             print(value)
+            ws.write(i+1,3,str(value),style_id)
+#             print(frequency_sort.index((key,value)))
+            ws.write(i+1,4,str(frequency_sort.index((key,value))),style_id)
+            predict_statistc.append((lucky_3d.get_id(),lucky_3d.get_num(), \
+                                   lucky_3d.get_sum(),value,frequency_sort.index((key,value))))
+            
+    if i%5 is 0:
+        print(i)
+        
+wb.save('lottery_3d_predict_statistic.xls')
+print(predict_statistc)
+
+def predict_sum_classify(predict):
+    sum_classify = {}
+    for i,elem in enumerate(predict):
+        if elem[2] not in sum_classify:
+            sum_classify[elem[2]]=[]
+        sum_classify[elem[2]].append(elem)
+    return sum_classify
+#         
+# def sum_result_classify(data_d3d):
+#     d3d_classify_sum = {}
+#     for i,elem in enumerate(data_d3d):
+#         if elem.get_sum() not in d3d_classify_sum:
+#             d3d_classify_sum[elem.get_sum()]=[]
+#         d3d_classify_sum[elem.get_sum()].append(elem)
+#     return d3d_classify_sum
+sum_predict_classify = predict_sum_classify(predict_statistc)
+print(sum_predict_classify)
+sum_predict_frequency = get_frequency(30, sum_predict_classify)
+print(sum_predict_frequency)
+sum_predict_percent = 
+
+
+
+    

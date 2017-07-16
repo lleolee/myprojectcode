@@ -1,0 +1,6 @@
+MODULES_MANAGER_V2
+webspider.Beibei|D:\python\workspace\webspider\src\webspider\Beibei.py
+webspider.__init__|D:\python\workspace\webspider\src\webspider\__init__.py
+webspider.database|D:\python\workspace\webspider\src\webspider\database.py
+webspider.httprequest|D:\python\workspace\webspider\src\webspider\httprequest.py
+webspider.webspider_main|D:\python\workspace\webspider\src\webspider\webspider_main.py

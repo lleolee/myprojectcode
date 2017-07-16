@@ -1,0 +1,8 @@
+MODULES_MANAGER_V2
+lottery.__init__|D:\python\workspace\lotteryticket\src\lottery\__init__.py
+lottery.d3d|D:\python\workspace\lotteryticket\src\lottery\d3d.py
+lottery.database|D:\python\workspace\lotteryticket\src\lottery\database.py
+lottery.double_color|D:\python\workspace\lotteryticket\src\lottery\double_color.py
+lottery.lottery3d|D:\python\workspace\lotteryticket\src\lottery\lottery3d.py
+lottery.lotterydoublecolor|D:\python\workspace\lotteryticket\src\lottery\lotterydoublecolor.py
+lottery.web|D:\python\workspace\lotteryticket\src\lottery\web.py

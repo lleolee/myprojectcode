@@ -1,0 +1,50 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\iaskcrawl\com.python.pydev.analysis\v2_indexcache
+iask.mysql|1499440158422006000|C:\Users\lleo\workspace\iaskcrawl\src\iask\mysql.py
+iask.tool|1498486085093152000|C:\Users\lleo\workspace\iaskcrawl\src\iask\tool.py
+iask.debug|1499906686792078000|C:\Users\lleo\workspace\iaskcrawl\src\iask\debug.py
+iask.iaskcrawl|1499909709099358000|C:\Users\lleo\workspace\iaskcrawl\src\iask\iaskcrawl.py
+iask.__init__|1498377019872661000|C:\Users\lleo\workspace\iaskcrawl\src\iask\__init__.py
+iask.page|1499780410438933000|C:\Users\lleo\workspace\iaskcrawl\src\iask\page.py
+-- END DISKCACHE
+-- START DICTIONARY
+13
+10=Crawl.__init__
+8=Crawl
+2=iask.mysql
+6=Page
+5=iask.debug
+9=Mysql.__init__
+3=iask.page
+13=Crawl.main
+4=iask.tool
+7=Mysql
+12=Page.__init__
+1=iask.iaskcrawl
+11=Tool
+-- END DICTIONARY
+-- START TREE 1
+6
+cra|1|Crawl!9@
+mys|1|Mysql!17@
+pag|1|Page!25@
+spi|1|spider!11@
+too|1|Tool!33@
+var|3|var_b!43@var_c!43@var_a!43@
+-- END TREE
+-- START TREE 2
+12
+__i|3|__init__!6&26@__init__!7&18@__init__!8&10@
+cur|1|cur!9&19@
+db|1|db!9&19@
+get|17|getCurrentDate!8&10@getText!6&26@getGoodAnswerInfo!6&26@getTotalPageNum!8&10@getPageURLByNum!8&10@getOtherAnswers!6&26@getQuestionInfo!8&10@getGoodAnswer!6&26@getOtherAnswerInfo!6&26@getPageByURL!6&26@getPageByNum!8&10@getAnswer!6&26@getCurrentTime!6&26@getCurrentDate!6&26@getCurrentTime!8&10@getQuestions!8&10@getCurrentTime!7&18@
+ins|1|insertData!7&18@
+mai|1|main!8&10@
+mys|1|mysql!10&11@
+pag|2|page_spider!10&11@page_num!10&11@
+rem|5|removeImg!11&35@removeAddr!11&35@removeADLink!11&35@removeExtraTag!11&35@removeNoneLine!11&35@
+rep|4|replaceTD!11&35@replaceBR!11&35@replaceLine!11&35@replace!11&34@
+too|1|tool!12&27@
+tot|2|total_num!10&11@total_num!13&11@
+-- END TREE

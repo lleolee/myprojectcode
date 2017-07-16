@@ -1,0 +1,7 @@
+MODULES_MANAGER_V2
+iask.__init__|C:\Users\lleo\workspace\iaskcrawl\src\iask\__init__.py
+iask.debug|C:\Users\lleo\workspace\iaskcrawl\src\iask\debug.py
+iask.iaskcrawl|C:\Users\lleo\workspace\iaskcrawl\src\iask\iaskcrawl.py
+iask.mysql|C:\Users\lleo\workspace\iaskcrawl\src\iask\mysql.py
+iask.page|C:\Users\lleo\workspace\iaskcrawl\src\iask\page.py
+iask.tool|C:\Users\lleo\workspace\iaskcrawl\src\iask\tool.py

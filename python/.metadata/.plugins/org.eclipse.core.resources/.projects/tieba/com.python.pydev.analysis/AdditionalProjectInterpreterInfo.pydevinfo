@@ -1,0 +1,39 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\lleo\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\tieba\com.python.pydev.analysis\v2_indexcache
+tieba.tieba|1495113897532185000|D:\python\workspace\tieba\src\tieba\tieba.py
+tieba.__init__|1495110954061318000|D:\python\workspace\tieba\src\tieba\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+5
+1=tieba.tieba
+4=BDTB.setFileTitle
+3=BDTB.__init__
+2=BDTB
+5=Tool
+-- END DICTIONARY
+-- START TREE 1
+6
+__a|1|__author__!11@
+bas|1|baseURL!11@
+bdt|2|bdtb!11@BDTB!9@
+flo|1|floorTag!11@
+see|1|seeLZ!11@
+too|1|Tool!9@
+-- END TREE
+-- START TREE 2
+13
+__i|1|__init__!2&10@
+bas|1|baseURL!3&11@
+def|1|defaultTitle!3&11@
+fil|2|file!3&11@file!4&11@
+flo|2|floorTag!3&11@floor!3&11@
+get|4|getContent!2&10@getPage!2&10@getPageNum!2&10@getTitle!2&10@
+rem|3|removeExtraTag!5&11@removeAddr!5&11@removeImg!5&11@
+rep|5|replaceLine!5&11@replace!5&10@replaceTD!5&11@replaceBR!5&11@replacePara!5&11@
+see|1|seeLZ!3&11@
+set|1|setFileTitle!2&10@
+sta|1|start!2&10@
+too|1|tool!3&11@
+wri|1|writeData!2&10@
+-- END TREE
