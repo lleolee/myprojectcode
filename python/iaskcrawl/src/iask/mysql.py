@@ -38,7 +38,7 @@ class Mysql:
     #数据库初始化
     def __init__(self):
         try:
-            self.db = pymysql.connect('localhost','root','root','iask')
+            self.db = pymysql.connect('192.168.1.9','root','root','iask')
             self.cur = self.db.cursor()
         except pymysql.err.DatabaseError as e:
             print(self.getCurrentTime()+"连接数据库错误，原因%d: %s"%(e.args[0], e.args[1]))

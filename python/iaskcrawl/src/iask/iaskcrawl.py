@@ -166,7 +166,7 @@ class Crawl:
     #主函数
     def main(self):
         f_handler=open('out.log', 'w',encoding='utf-8') 
-        sys.stdout=f_handler
+#         sys.stdout=f_handler
         page = open('page.txt', 'r')
         content = page.readline()
         start_page = int(content.strip()) - 1
